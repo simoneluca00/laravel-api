@@ -1,28 +1,21 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <Header />
-                    <div class="card-header">Benvenuto</div>
+    <div>
+        <Header />
 
-                    <div class="card-body">
-                        Sito in costruzione
-                    </div>
-                </div>
-            </div>
-        </div>
+        <Main />
     </div>
 </template>
 
 <script>
-import Header from '../components/Header.vue';
+import Header from '../components/layout/Header.vue';
+import Main from '../components/layout/Main.vue';
 
     export default {
         name: 'App',
 
         components: {
             Header,
+            Main,
         }
     }
 </script>

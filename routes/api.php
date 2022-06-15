@@ -17,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::namespace('Api')->group(function(){
+    
+    // NOTE 1) in questo caso la rotta richiama soltanto la public function index del Controller
+    Route::get('/posts', 'PostController@index');
+
+});
